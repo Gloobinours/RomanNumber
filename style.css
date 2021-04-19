@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4CB1F7;
+
+    justify-content: center;
+    align-items: center;
+
+    animation: background 10s infinite ;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+
+    position: relative;
+    width: 500px;
+    height: 50px;
+
+    border-radius: 25px;
+    border: #0455BF solid 2px;
+    padding: 0 25px 0 25px;
+
+    background-color: #fff;
+    box-shadow: 10px 10px 58px 0px rgba(0,0,0,0.75);
+}
+#button{
+    font-size: 16px;
+    border: #0433BF;
+    border-radius: 25px;
+
+    transition: .3s;
+
+    outline: none !important;
+}
+#button:focus{
+    animation: button .5s;
+}
+
+#input{
+    border: none;
+    font-size: large;
+}
+#input:focus{
+    outline: none !important;
+}
+
+#result{
+    display: block;
+    position: absolute;
+
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    font-size: 30px;
+
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: none;
+}
+
+
+@keyframes background{
+    0%{
+        background-color: #4CB1F7;
+    }
+    33%{
+        background-color: #033E8C;
+    }
+    66%{
+        background-color: #0455BF;
+    }
+    99%{
+        background-color: #4CB1F7;
+    }
+
+}
+
+@keyframes button{
+    0%{
+        background-color: #033E8C;
+    }
+    66%{
+        background-color: #0455BF;
+    }
+}
